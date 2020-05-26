@@ -6,7 +6,7 @@ Created on Fri May 15 10:34:21 2020
 """
 import requests
 import json
-from pandas.io.json import json_normalize
+from pandas import json_normalize
 import pandas as pd
 import numpy as np
 
@@ -125,7 +125,7 @@ def soldHomesTableResults(properties):
 
     headers = {
             'x-rapidapi-host': "realtor.p.rapidapi.com",
-            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
 
     rows = [] #Create data array
@@ -178,7 +178,7 @@ def searchResults(purch = True): #Make the purchasing choice True by default; as
         querystring = {"sort":"relevance","city":city,"state_code":state,"limit":results,"offset":"0"}
         headers = {
                 'x-rapidapi-host': "realtor.p.rapidapi.com",
-                'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+                'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
         }
     else:
         print("You have chosen to buy a home.")
@@ -188,7 +188,7 @@ def searchResults(purch = True): #Make the purchasing choice True by default; as
         querystring = {"sort":"relevance","city":city,"limit":results,"offset":"0","state_code":state}
         headers = {
                 'x-rapidapi-host': "realtor.p.rapidapi.com",
-                'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+                'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
         }
         
     response = requests.request("GET", url, headers=headers, params=querystring)
@@ -220,7 +220,7 @@ def get_Descriptions(properties):
 
     headers = {
         'x-rapidapi-host': "realtor.p.rapidapi.com",
-        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
 
     for i in properties['property_id']:
@@ -256,7 +256,7 @@ def nearbyRestaurants(properties):
 
     headers = {
         'x-rapidapi-host': "tripadvisor1.p.rapidapi.com",
-        'x-rapidapi-key': "e3bf3719c0msh2279903cd2d3765p1c38bajsn42dd6c3f2d2c" #Noah.Hellenthal@fortisureit.com
+        'x-rapidapi-key': "e3bf3719c0msh2279903cd2d3765p1c38bajsn42dd6c3f2d2c" 
     }
     lats = []
     for lat in properties['address.lat']:
@@ -313,7 +313,7 @@ def nearbyAttractions(properties):
 
     headers = {
         'x-rapidapi-host': "tripadvisor1.p.rapidapi.com",
-        'x-rapidapi-key': "e3bf3719c0msh2279903cd2d3765p1c38bajsn42dd6c3f2d2c" #Noah.Hellenthal@fortisureit.com
+        'x-rapidapi-key': "e3bf3719c0msh2279903cd2d3765p1c38bajsn42dd6c3f2d2c" 
     }
     lats = []
     for lat in properties['address.lat']:
@@ -371,7 +371,7 @@ def homeResultsTable(properties):
 
     headers = {
             'x-rapidapi-host': "realtor.p.rapidapi.com",
-            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
 
     rows = [] #Create data array
@@ -423,7 +423,7 @@ def getTaxInfo(properties):
 
     headers = {
         'x-rapidapi-host': "realtor.p.rapidapi.com",
-        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
     df = pd.DataFrame()
     for i in properties['property_id']:
@@ -506,7 +506,7 @@ def rentalBuildingInfo(properties):
 
     headers = {
             'x-rapidapi-host': "realtor.p.rapidapi.com",
-            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+            'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
 
     rows = [] #Create data array
@@ -554,7 +554,7 @@ def rentalRoomInfo(properties):
 
     headers = {
         'x-rapidapi-host': "realtor.p.rapidapi.com",
-        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" #nhellenthal@outlook.com
+        'x-rapidapi-key': "efecd4bcfemshd20188d5bcafb66p14fd77jsnb8685b9debc2" 
     }
     df = pd.DataFrame()
     for i in properties['property_id']:
