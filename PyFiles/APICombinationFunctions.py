@@ -17,7 +17,6 @@ def startScreen():
     print("|                                                    |")
     print("|____________________________________________________|")
 
-#Test Comment from Noah
 
 def isPurchasing():
     """
